@@ -64,6 +64,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 Plugin 'haya14busa/incsearch.vim'
+
+Plugin 'joshdick/onedark.vim'
+
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 
 " All of your Plugins must be added before the following line
@@ -79,6 +82,9 @@ set foldmethod=indent
 set foldlevel=99
 set clipboard=unnamed
 
+set wildmode=longest:full,full
+set wildmenu
+set hlsearch
 " Enable folding with the spacebar
 nnoremap <space> za
 
@@ -111,10 +117,10 @@ let python_highlight_all=1
 syntax enable
 
 if has('gui_running')
-  set background=light
+  set background=dark
   colorscheme solarized
 else
-  colorscheme zenburn
+  colorscheme onedark
 endif
 
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
@@ -126,7 +132,7 @@ set tags=./tags;
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
+    \ set tabstop=4 | 
     \ set softtabstop=4 |
     \ set shiftwidth=4 |
     \ set textwidth=79 |
@@ -140,10 +146,11 @@ au BufNewFile,BufRead *.js, *.html, *.css
     \ set shiftwidth=2
 
 au BufNewFile,BufRead *.rb
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
-    \ set autoindent |
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set textwidth=85 |
+    \ set expandtab |
+    \ set autoindent
 
 " set editing-mode vi
