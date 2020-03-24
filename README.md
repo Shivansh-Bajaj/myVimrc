@@ -41,5 +41,17 @@ git submodule update --init --recursive
 ./install.sh --all
 ```
 
+with latest vim version if you face following issue:
+```
+Warning: Failed to set locale category LC_NUMERIC to en_CH.
+Warning: Failed to set locale category LC_TIME to en_CH.
+Warning: Failed to set locale category LC_COLLATE to en_CH.
+Warning: Failed to set locale category LC_MONETARY to en_CH.
+Warning: Failed to set locale category LC_MESSAGES to en_CH.
+```
 
+add following in you zshrc or bashrc file to solve 
+```
+export LC_ALL=en_US.UTF-8
+```
 
